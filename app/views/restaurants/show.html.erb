@@ -1,0 +1,81 @@
+<ul>
+	<li>
+	  <strong>Name:</strong>
+	  <%= @restaurant.name %>
+	</li>
+	 
+	<li>
+	  <strong>Address:</strong>
+	  <%= @restaurant.address %>
+	</li>
+
+	<li>
+	  <strong>Operator:</strong>
+	  <%= @restaurant.operator %>
+	</li>
+ 
+	<li>
+	  <strong>Accepts Supplemental Nutrition Assistance Program:</strong>
+	  <%= @restaurant.accept_sna %>
+	</li>
+
+	<li>
+	  <strong>Accepts Farmers' Market Nutrition Program:</strong>
+	  <%= @restaurant.accept_fmn %>
+	</li>
+ 
+	<li>
+	  <strong>Distributes Food Bucks:</strong>
+	  <%= @restaurant.destribute %>
+	</li>
+
+	<li>
+	  <strong>Only Redeem Food Bucks:</strong>
+	  <%= @restaurant.only_redee %>
+	</li>
+ 
+	<li>
+	  <strong>EBT machine at the market:</strong>
+	  <%= @restaurant.ebt_machin %>
+	</li>
+
+	<li>
+	  <strong>Day and time of operation:</strong>
+	  <%= @restaurant.day_time %>
+	</li>
+ 
+	<li>
+	  <strong>Zip Code:</strong>
+	  <%= @restaurant.zip_code %>
+	</li>
+
+	<li>
+	  <strong>Longitude</strong>
+	  <%= @restaurant.lon %>
+	</li>
+
+	<li>
+	  <strong>Latitude:</strong>
+	  <%= @restaurant.lat %>
+	</li>
+
+	<li>
+	  <strong>X:</strong>
+	  <%= @restaurant.x %>
+	</li>
+ 
+	<li>
+	  <strong>Y:</strong>
+	  <%= @restaurant.y %>
+	</li>
+</ul>
+
+<h2>Comments</h2>
+<%= render @restaurant.comments %>
+
+<h2>Add a comment:</h2>
+<%= render 'comments/form' %>
+
+
+<%= link_to 'Edit', edit_restaurant_path(@restaurant) %> |
+<%= link_to 'Back', restaurants_path %>

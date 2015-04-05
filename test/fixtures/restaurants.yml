@@ -1,0 +1,33 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  address: MyText
+  operator: MyString
+  accept_sna: MyString
+  accept_fmn: MyString
+  destribute: MyString
+  only_redee: MyString
+  ebt_machin: MyString
+  day_time: MyString
+  zip_code: 9.99
+  lon: 9.99
+  lat: 9.99
+  x: 9.99
+  'y': 9.99
+
+two:
+  name: MyString
+  address: MyText
+  operator: MyString
+  accept_sna: MyString
+  accept_fmn: MyString
+  destribute: MyString
+  only_redee: MyString
+  ebt_machin: MyString
+  day_time: MyString
+  zip_code: 9.99
+  lon: 9.99
+  lat: 9.99
+  x: 9.99
+  'y': 9.99

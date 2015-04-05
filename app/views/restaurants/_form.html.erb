@@ -1,0 +1,89 @@
+<%= form_for :restaurant, url: restaurants_path do |f| %>
+  <% if @restaurant.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@restaurant.errors.count, "error") %> prohibited
+        this restaurant from being saved:
+      </h2>
+      <ul>
+        <% @restaurant.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <p>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </p>
+ 
+  <p>
+    <%= f.label :address %><br>
+    <%= f.text_area :address %>
+  </p>
+  
+  <p>
+    <%= f.label :operator %><br>
+    <%= f.text_field :operator %>
+  </p>
+ 
+  <p>
+    <%= f.label :accept_sna %><br>
+    <%= f.text_field :accept_sna %>
+  </p>
+  
+  <p>
+    <%= f.label :accept_fmn %><br>
+    <%= f.text_field :accept_fmn %>
+  </p>
+ 
+  <p>
+    <%= f.label :destribute %><br>
+    <%= f.text_field :destribute %>
+  </p>
+  
+  <p>
+    <%= f.label :only_redee %><br>
+    <%= f.text_field :only_redee %>
+  </p>
+ 
+  <p>
+    <%= f.label :ebt_machin %><br>
+    <%= f.text_field :ebt_machin %>
+  </p>
+  
+  <p>
+    <%= f.label :day_time %><br>
+    <%= f.text_field :day_time %>
+  </p>
+ 
+  <p>
+    <%= f.label :zip_code %><br>
+    <%= f.text_field :zip_code %>
+  </p>
+  
+  <p>
+    <%= f.label :lon %><br>
+    <%= f.text_field :lon %>
+  </p>
+ 
+  <p>
+    <%= f.label :lat %><br>
+    <%= f.text_field :lat %>
+  </p>
+  
+  <p>
+    <%= f.label :x %><br>
+    <%= f.text_field :x %>
+  </p>
+ 
+  <p>
+    <%= f.label :y %><br>
+    <%= f.text_field :y %>
+  </p>
+ 
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>

@@ -1,0 +1,43 @@
+<h1>Listing Farmers Market</h1>
+<%= link_to 'New Farmers Market', new_restaurant_path %>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Address</th>
+    <th>Operator</th>
+    <th>Accepts Supplemental Nutrition Assistance Program</th>
+    <th>Accepts Farmers' Market Nutrition Program</th>
+    <th>Distributes Food Bucks</th>
+    <th>Only Redeem Food Bucks</th>
+    <th>EBT machine at the market</th>
+    <th>Day and time of operation</th>
+    <th>Zip Code</th>
+    <th>Longitude</th>
+    <th>Latitude</th>
+    <th>X</th>
+    <th>Y</th>
+  </tr>
+  <% @restaurants.each do |restaurant| %>
+    <tr>
+      <td><%= restaurant.name %></td>
+      <td><%= restaurant.address %></td>
+      <td><%= restaurant.operator %></td>
+      <td><%= restaurant.accept_sna %></td>
+      <td><%= restaurant.accept_fmn %></td>
+      <td><%= restaurant.destribute %></td>
+      <td><%= restaurant.only_redee %></td>
+      <td><%= restaurant.ebt_machin %></td>
+      <td><%= restaurant.day_time %></td>
+      <td><%= restaurant.zip_code %></td>
+      <td><%= restaurant.lon %></td>
+      <td><%= restaurant.lat %></td>
+      <td><%= restaurant.x %></td>
+      <td><%= restaurant.y %></td>
+	  <td><%= link_to 'Show', restaurant_path(restaurant) %></td>
+	  <td><%= link_to 'Edit', edit_restaurant_path(restaurant) %></td>
+	  <td><%= link_to 'Destroy', restaurant_path(restaurant),
+	                method: :delete,
+	                data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+</table>
