@@ -18,6 +18,26 @@ Feature: Show farmers markets in philidelphia
   Scenario: Dlete certain farmers market 
     Given a farmers market
 	When this farmers market is discarded
-	Then user will not see this market on the page	
+	Then user will not see this market on the page
+	
+  Scenario: Sign up is successful 
+    Given a situation
+	When certain user first time visit this page
+	Then this user can sign up and get to login page
+	
+  Scenario: Sign up failed
+    Given second situation
+	When certain user signed up before
+	Then this user can not sign up again
+	
+  Scenario: login failed
+    Given third situation
+	When password or username does not match
+	Then tell user invalid name or password
+    		
+  Scenario: logout from anywhere
+  	Given a user is logged in
+	When the user click logout at top of any page
+	Then session ended and redirect to sign up page
 	
 	

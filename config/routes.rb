@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
+  get "log_in" => "sessions#new", :as => "log_in"
+  get "sign_up" => "users#new", :as => "sign_up"
+  get "log_out" => "sessions#destroy", :as => "log_out"
+  root :to => "users#new"
+  resources :users
+  resources :sessions
+  
   get 'welcome/index'
 
   resources :restaurants do
@@ -8,7 +15,7 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'welcome#index'
+  # root 'welcome#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
