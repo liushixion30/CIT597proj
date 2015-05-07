@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   def new
     if(session[:user_id] != nil)
-      redirect_to "/welcome/index", :notice => "Logged in!"
+      redirect_to "/welcome/index"
     else
       @user = User.new
     end
